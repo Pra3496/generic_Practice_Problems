@@ -56,5 +56,32 @@ namespace GenericPracticeProblem
 
 
 
+        public void MinimumIsString(string sNo1, string sNo2, string sNo3)
+        {
+            if (((sNo1.Equals(sNo2) && (sNo1.Equals(sNo3)))))
+            {
+                Console.WriteLine("All are same");
+            }
+            else
+            {
+                if ((sNo1.Length <= sNo2.Length) && (sNo1.Length <= sNo3.Length))
+                {
+                    Console.WriteLine("Minimum Number is : " + sNo1);
+                }
+                else if ((sNo2.Length <= sNo1.Length) && (sNo2.Length <= sNo3.Length))
+                {
+                    Console.WriteLine("Minimum Number is : " + sNo2);
+                }
+                else
+                {
+                    Console.WriteLine("Minimum Number is : " + sNo3);
+                }
+            }
+
+        }
+
+
+
+
     }
 }

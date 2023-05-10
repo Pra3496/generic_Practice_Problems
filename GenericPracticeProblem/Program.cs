@@ -42,6 +42,16 @@ namespace GenericPracticeProblem
             min.MinimumIsFloat(fNo1, fNo2, fNo3);
 
 
+            Console.WriteLine("Enter Three Line : ");
+
+            Console.Write("Enter First line : ");
+            string sNo1 = Console.ReadLine();
+            Console.Write("Enter Second line : ");
+            string sNo2 = Console.ReadLine();
+            Console.Write("Enter Second line : ");
+            string sNo3 = Console.ReadLine();
+
+            min.MinimumIsString(sNo1, sNo2, sNo3);
 
 
 
