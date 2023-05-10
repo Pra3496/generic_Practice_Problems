@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="DeleteArrayGeneric.cs" />
     <Compile Include="DeleteArrays.cs" />
+    <Compile Include="GenericMinimum.cs" />
     <Compile Include="MinimumNumber.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
