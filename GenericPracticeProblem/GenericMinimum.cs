@@ -5,13 +5,22 @@ namespace GenericPracticeProblem
 {
     public class GenericMinimum<T> where T : IComparable
     {
-        
-       
-        public static void GenericMinimumIs(T firstValue, T secondValue, T thirdValue)
+        private T firstValue;
+        private T secondValue;
+        private T thirdValue;
+
+        public GenericMinimum(T firstValue, T secondValue, T thirdValue)
+        {
+            this.firstValue = firstValue;
+            this.secondValue = secondValue;
+            this.thirdValue = thirdValue;
+        }
+        //   5  2  3
+        private T GenericMinimumIs(T firstValue, T secondValue, T thirdValue)
         {
             if ((firstValue.Equals(secondValue)) && (firstValue.Equals(thirdValue)))
             {
-                Console.WriteLine("All are same");
+                return default;
             }
             else
             {
@@ -19,37 +28,43 @@ namespace GenericPracticeProblem
                 {
                     if(secondValue.CompareTo(thirdValue) == 1)
                     {
-                        Console.WriteLine("Minimum Number is : " +thirdValue);
+                        return thirdValue;
                     }
                     else
                     {
-                        Console.WriteLine("Minimum Number is : " + secondValue);
+                        return secondValue;
                     }
                 }
                 else if ((secondValue.CompareTo(firstValue)) == (secondValue.CompareTo(thirdValue)) && (secondValue.CompareTo(thirdValue) == 1))
                 {
                     if (firstValue.CompareTo(thirdValue) == 1)
                     {
-                        Console.WriteLine("Minimum Number is : " +thirdValue);
+                        return thirdValue;
                     }
                     else
                     {
-                        Console.WriteLine("Minimum Number is : " +firstValue);
+                        return firstValue;
                     }
                 }
                 else
                 {
                     if (firstValue.CompareTo(secondValue) == 1)
                     {
-                        Console.WriteLine("Minimum Number is : " +secondValue);
+                        return secondValue;
                     }
                     else
                     {
-                        Console.WriteLine("Minimum Number is : " +firstValue);
+                        return firstValue;
                     }
                 }
             }
 
+        }
+
+        public T GetMin()
+        {
+            dynamic num = GenericMinimumIs(firstValue,secondValue,thirdValue);
+            return num;
         }
     }
 }
