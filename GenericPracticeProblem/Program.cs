@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,53 +11,23 @@ namespace GenericPracticeProblem
     {
         static void Main(string[] args)
         { 
+            
+            // Minimum Number From three Integers
 
-            // Generic Array Problems
+            MinimumNumber min = new MinimumNumber();
 
-            DeleteArrayGeneric intDeleteArrayGeneric = new DeleteArrayGeneric();
-            DeleteArrayGeneric doubleDeleteArrayGeneric = new DeleteArrayGeneric();
-            DeleteArrayGeneric charDeleteArrayGeneric = new DeleteArrayGeneric();
+            Console.WriteLine("Enter Three Number");
+            Console.Write("Enter First Numbers : ");
+            int iNo1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter Second Number : ");
+            int iNo2 = int.Parse(Console.ReadLine());
+            Console.Write("Enter Third Number : ");
+            int iNo3 = Convert.ToInt32(Console.ReadLine());
 
-            int[] iArr = { 1, 2, 3, 4, 5, 6, 5 };
+            min.MinimumIsInteger(iNo1,iNo2,iNo3);
 
-            char[] cArr = { 'a', 'P', 'u', 'T', 'L' };
+            
 
-            double[] dArr = { 1.56, 65.2, 15.3, 44.66, 3.5, 54.6, 21.5 };
-
-            Console.WriteLine("\nGeneric Array Problems\n");
-
-
-            intDeleteArrayGeneric.GenDeleteMethod<int>(ref iArr, 5);
-
-            Console.WriteLine("Array after Deleting Element in Charecter\n");
-            foreach (char i in cArr)
-            {
-                Console.Write("\t" + i);
-            }
-            Console.WriteLine("\n\n");
-
-
-
-            charDeleteArrayGeneric.GenDeleteMethod<char>(ref cArr, 'T');
-
-            Console.WriteLine("Array after Deleting Element in Double\n");
-            foreach (double i in dArr)
-            {
-                Console.Write("\t" + i);
-            }
-            Console.WriteLine("\n\n");
-
-
-
-
-            doubleDeleteArrayGeneric.GenDeleteMethod<double>(ref dArr, 3.5);
-
-            Console.WriteLine("Array after Deleting Element in Integer\n");
-            foreach (int i in iArr)
-            {
-                Console.Write("\t" + i);
-            }
-            Console.WriteLine("\n\n");
 
             Console.ReadKey();
         }

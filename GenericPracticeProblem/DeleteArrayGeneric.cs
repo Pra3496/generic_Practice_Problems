@@ -6,7 +6,6 @@ namespace GenericPracticeProblem
 {
     public class DeleteArrayGeneric
     {
-        
         public void GenDeleteMethod<T>(ref T[] arr, T iPos)
         {
             Console.WriteLine("\n\n"+typeof(T)+"\n\n");
@@ -33,5 +32,27 @@ namespace GenericPracticeProblem
 
 
         }
+
+        public void copyArr(int[] Arr)
+        {
+            Console.WriteLine("In Class Method : " + Arr.GetHashCode());
+
+            int[] newArr = new int[2];
+
+            newArr = Arr;
+
+            Console.WriteLine("In Class Method  New Array: " + Arr.GetHashCode());
+
+            Console.WriteLine("Array after Deleting Element in Integer\n");
+            foreach (int i in newArr)
+            {
+                Console.Write("\t" + i);
+            }
+            Console.WriteLine("\n\n");
+
+            Console.WriteLine("In Class Method : " + Arr.GetHashCode());
+        }
+
+
     }
 }
