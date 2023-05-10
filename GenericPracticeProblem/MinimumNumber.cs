@@ -29,7 +29,31 @@ namespace GenericPracticeProblem
            
         }
 
-       
+        public void MinimumIsFloat(float fNo1, float fNo2, float fNo3)
+        {
+            if ((fNo1 == fNo2) && (fNo1 == fNo3))
+            {
+                Console.WriteLine("All are same");
+            }
+            else
+            {
+                if ((fNo1 <= fNo2) && (fNo1 <= fNo3))
+                {
+                    Console.WriteLine("Minimum Number is : " + fNo1);
+                }
+                else if ((fNo2 <= fNo1) && (fNo2 <= fNo3))
+                {
+                    Console.WriteLine("Minimum Number is : " + fNo2);
+                }
+                else
+                {
+                    Console.WriteLine("Minimum Number is : " + fNo3);
+                }
+            }
+
+        }
+
+
 
 
     }

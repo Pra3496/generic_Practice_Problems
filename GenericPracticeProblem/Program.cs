@@ -26,7 +26,23 @@ namespace GenericPracticeProblem
 
             min.MinimumIsInteger(iNo1,iNo2,iNo3);
 
-            
+
+
+            Console.WriteLine("Enter Three Number");
+
+            Console.Write("Enter First Numbers : ");
+            float fNo1 = Convert.ToSingle(Console.ReadLine());
+
+            Console.Write("Enter Second Number : ");
+            float fNo2 = Single.Parse(Console.ReadLine());
+
+            Console.Write("Enter Third Number : ");
+            float fNo3 = float.Parse(Console.ReadLine());
+
+            min.MinimumIsFloat(fNo1, fNo2, fNo3);
+
+
+
 
 
             Console.ReadKey();
