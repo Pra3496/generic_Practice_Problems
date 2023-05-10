@@ -13,9 +13,9 @@ namespace GenericPracticeProblem
 
             // Generic Array Problems
 
-            DeleteArrayGeneric<int> intDeleteArrayGeneric = new DeleteArrayGeneric<int>();
-            DeleteArrayGeneric<double> doubleDeleteArrayGeneric = new DeleteArrayGeneric<double>();
-            DeleteArrayGeneric<char> charDeleteArrayGeneric = new DeleteArrayGeneric<char>();
+            DeleteArrayGeneric intDeleteArrayGeneric = new DeleteArrayGeneric();
+            DeleteArrayGeneric doubleDeleteArrayGeneric = new DeleteArrayGeneric();
+            DeleteArrayGeneric charDeleteArrayGeneric = new DeleteArrayGeneric();
 
             int[] iArr = { 1, 2, 3, 4, 5, 6, 5 };
 
@@ -26,29 +26,32 @@ namespace GenericPracticeProblem
             Console.WriteLine("\nGeneric Array Problems\n");
 
 
-            intDeleteArrayGeneric.GenDeleteMethod(ref iArr, 5);
+            intDeleteArrayGeneric.GenDeleteMethod<int>(ref iArr, 5);
 
-            charDeleteArrayGeneric.GenDeleteMethod(ref cArr, 'T');
-
-            doubleDeleteArrayGeneric.GenDeleteMethod(ref dArr, 3.5);
-
-
-
-            Console.WriteLine("Array after Deleting Element in Charecter");
+            Console.WriteLine("Array after Deleting Element in Charecter\n");
             foreach (char i in cArr)
             {
                 Console.Write("\t" + i);
             }
             Console.WriteLine("\n\n");
 
-            Console.WriteLine("Array after Deleting Element in Double");
+
+
+            charDeleteArrayGeneric.GenDeleteMethod<char>(ref cArr, 'T');
+
+            Console.WriteLine("Array after Deleting Element in Double\n");
             foreach (double i in dArr)
             {
                 Console.Write("\t" + i);
             }
             Console.WriteLine("\n\n");
 
-            Console.WriteLine("Array after Deleting Element in Integer");
+
+
+
+            doubleDeleteArrayGeneric.GenDeleteMethod<double>(ref dArr, 3.5);
+
+            Console.WriteLine("Array after Deleting Element in Integer\n");
             foreach (int i in iArr)
             {
                 Console.Write("\t" + i);
